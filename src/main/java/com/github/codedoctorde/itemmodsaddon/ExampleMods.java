@@ -1,6 +1,6 @@
 package com.github.codedoctorde.itemmodsaddon;
 
-import com.github.codedoctorde.itemmods.ItemMods;
+import dev.linwood.itemmods.ItemMods;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -11,11 +11,11 @@ public class ExampleMods extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        ItemMods.getPlugin().getApi().registerAddon(addon);
+        ItemMods.getPackManager().registerPack(addon);
     }
 
     @Override
     public void onDisable() {
-        ItemMods.getPlugin().getApi().unregisterAddon(addon);
+        ItemMods.getPackManager().unregisterPack("example_pack");
     }
 }
